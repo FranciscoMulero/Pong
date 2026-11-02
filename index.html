@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d1b">
+  <title>NEON PONG - FML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <span class="mark">▰</span>
+        <div>
+          <h1>NEON PONG</h1>
+          <p>ARCADE CLASSIC · 01</p>
+        </div>
+      </div>
+      <span class="status"><i></i> READY TO PLAY</span>
+    </header>
+
+    <section class="layout">
+      <aside class="panel">
+        <h2>GAME MODE</h2>
+
+        <button class="mode active" type="button">
+          <span>◉</span>
+          <span>
+            <b>VS CPU</b>
+            <small>Juega contra la máquina</small>
+          </span>
+        </button>
+
+        <div id="cpuSettings">
+          <h2>DIFICULTAD</h2>
+          <div class="difficulty">
+            <button type="button" data-difficulty="easy">FÁCIL</button>
+            <button type="button" data-difficulty="normal" class="selected">NORMAL</button>
+            <button type="button" data-difficulty="hard">DIFÍCIL</button>
+          </div>
+        </div>
+
+        <div class="controls">
+          <h2>CONTROLES</h2>
+          <p><kbd>W</kbd><kbd>S</kbd> o <kbd>↑</kbd><kbd>↓</kbd> mover</p>
+          <p><kbd>SPACE</kbd> pausar / empezar</p>
+          <p class="hint">En móvil: toca y arrastra tu paleta.</p>
+        </div>
+
+        <button id="startBtn" class="action" type="button">
+          ▶　EMPEZAR PARTIDA
+        </button>
+      </aside>
+
+      <section class="gamearea">
+        <div class="scorebar">
+          <div>
+            <small>PLAYER 1</small>
+            <strong id="score1">00</strong>
+          </div>
+          <div class="round">FIRST TO 7</div>
+          <div>
+            <small>CPU</small>
+            <strong id="score2">00</strong>
+          </div>
+        </div>
+
+        <div class="canvaswrap">
+          <canvas id="game" width="900" height="520"
+                  aria-label="Juego Pong"></canvas>
+
+          <div id="overlay" class="overlay">
+            <div class="orb">✦</div>
+            <h2>READY?</h2>
+            <p>Presiona empezar para jugar</p>
+          </div>
+        </div>
+
+        <footer>
+          <span>NEON PONG <b>v1.0</b></span>
+          <span id="gameStatus">INSERT COIN</span>
+          <span>&copy; Francisco Mulero López</span>
+        </footer>
+      </section>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
